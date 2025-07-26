@@ -15,9 +15,11 @@ app = FastAPI(title="AI Crop Disease Analyzer")
 
 # Get allowed origins from environment or use defaults
 allowed_origins = os.getenv("ALLOWED_ORIGINS", "").split(",") if os.getenv("ALLOWED_ORIGINS") else [
+    "http://localhost:3000",      # Next.js default port
     "http://localhost:5173",      # Vite default port
     "http://localhost:4173",      # Vite preview port
     "http://localhost:8080",      # Custom frontend port
+    "http://127.0.0.1:3000",
     "http://127.0.0.1:5173",
     "http://127.0.0.1:4173",
     "http://127.0.0.1:8080",
@@ -388,5 +390,5 @@ async def health_check():
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.getenv("PORT", 3000))
+    port = int(os.getenv("PORT", 5000))
     uvicorn.run(app, host="0.0.0.0", port=port) 
