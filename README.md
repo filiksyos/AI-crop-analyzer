@@ -1,5 +1,7 @@
 # 🌾 AI Crop Disease Analyzer
 
+https://github.com/user-attachments/assets/80c8d70f-5340-4240-bf0b-81811e34ed65
+
 AI-powered crop disease detection and analysis using OpenRouter API with FastAPI backend.
 
 ## Features
